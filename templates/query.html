@@ -1,0 +1,19 @@
+<html>
+   <head>
+    <link href="{{ url_for('static', filename='query.css') }}" rel="stylesheet">
+   </head>
+   <body>
+      {% include 'navbar.html' %}
+      <form class="form" action = "" method = "POST" 
+       enctype = "multipart/form-data">
+       <div class="field-container">
+         <span>Select language to translate:</span>
+         <input type="text" name="language">
+       </div>
+       <input class="submit input" type = "submit"/>
+    </form>    
+   </body>
+</html>
+
+    
+ 

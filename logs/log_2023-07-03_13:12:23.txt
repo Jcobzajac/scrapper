@@ -1,0 +1,58 @@
+2023-07-03 13:12:23,992 - INFO - Query: Please translate text after ':' to Italian:Dzień dobry, oto Twoja
+FAKTURA VAT
+NR: F/700831/2023/647
+JAKZAJ
+WIERZBOWA 2A/1
+40-169 KATOWICE  Decathlon Sp. z o.o.                           
+nr BDO: 000005259
+ul. Geodezyjna 76, 
+03-290 WARSZAWAData wystawienia: 2023-05-20
+Data sprzedaży: 2023-05-20
+      Twoje zakupy
+L.P.WYSTAWIONA PRZEZ: DLA:Nr paragonu: 32000000010/101154050/700831
+NIP  951-18-55-233 NIP  9542849920
+UWAGI:
+PRODUKT ILOŚĆ JEDN.CENA
+JEDN.
+BRUTTOWARTOŚĆ
+SPRZED.
+BRUTTOSTAWKA
+VAT
+1 RS 700 GREY ORANGE L RFID: 729807
+35837873913651 szt. 2 349,00 23 % 2 349,00
+VATSuma wart.
+sprzedaży NETTOWartość VAT
+23 % 1 909,76 439,24
+Zapłacono: 2 349,00 
+Forma płatności Kwota
+Karta płatnicza 2 349,00
+1/1
+2023-07-03 13:12:36,701 - INFO - Response: Buongiorno, ecco la tua
+FATTURA IVA
+NR: F/700831/2023/647
+JAKZAJ
+WIERZBOWA 2A/1
+40-169 KATOWICE  Decathlon Sp. z o.o.                           
+nr BDO: 000005259
+ul. Geodezyjna 76, 
+03-290 WARSZAWAData di emissione: 2023-05-20
+Data di vendita: 2023-05-20
+      I tuoi acquisti
+L.P.EMESSA DA: PER:NR scontrino: 32000000010/101154050/700831
+NIP  951-18-55-233 NIP  9542849920
+OSSERVAZIONI:
+PRODOTTO QUANTITÀ PREZZO UNITARIO
+UNITÀ
+TOTALE
+VENDITA
+TOTALEALIQUOTA
+IVA
+1 RS 700 GRIGIO ARANCIO L RFID: 729807
+35837873913651 pz. 2 349,00 23 % 2 349,00
+IVATotale valore
+vendita VALORE NETTOIVA
+23 % 1 909,76 439,24
+Pagato: 2 349,00 
+Metodo di pagamento Importo
+Carta di credito 2 349,00
+1/1

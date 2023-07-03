@@ -1,0 +1,85 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.navbar-logo {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    margin-right: 10px; /* Adjust the spacing as needed */
+    object-fit: contain; /* Maintain the aspect ratio of the image */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+ }
+ .form{
+    border-radius: 6px;
+    margin: 10px;
+    display:flex;
+    background-color: #F2F2F2;
+    padding: 24px 24px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 500;
+    margin-right: 500;
+    margin-top: 200;
+ }
+ .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+ }
+ .inputfile + label {
+    background-color: white;
+    color:black;
+    display: inline-block;
+    cursor: pointer; /* "hand" cursor */
+    border-radius: 4px;
+    border: 2px solid black;
+    padding: 8px;
+ }
+
+ .inputfile:focus + label,
+ .inputfile + label:hover {
+    background-color: #29A96D;
+    color: white;
+ }
+ input{
+    background-color: white;
+    border-radius: 4px;
+    border: 2px solid black;
+    padding: 8px;
+ }
+ input:hover, input:focus{
+    background-color: #1e8857;
+ }
+ .submit{
+    max-width: 100px;
+    cursor: pointer;
+    background-color: #29A96D;
+ }
+ .field-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+ }
+ .field-container span{
+    color: black;
+ }

@@ -1,0 +1,28 @@
+Good morning, here is your
+VAT INVOICE
+NR: F/700831/2023/647
+JAKZAJ
+WIERZBOWA 2A/1
+40-169 KATOWICE  Decathlon Sp. z o.o.                           
+BDO number: 000005259
+ul. Geodezyjna 76, 
+03-290 WARSZAWADate of issue: 2023-05-20
+Date of sale: 2023-05-20
+      Your purchases
+L.P.ISSUED BY: FOR:Receipt number: 32000000010/101154050/700831
+VAT number  951-18-55-233 VAT number  9542849920
+REMARKS:
+PRODUCT QUANTITY UNIT PRICE
+UNIT
+GROSSVALUE
+SOLD
+GROSSRATE
+VAT
+1 RS 700 GREY ORANGE L RFID: 729807
+35837873913651 pcs. 2 349,00 23 % 2 349,00
+VATTotal sales valueNET value of VAT
+23 % 1 909,76 439,24
+Paid: 2 349,00 
+Payment method Amount
+Payment card 2 349,00
+1/1

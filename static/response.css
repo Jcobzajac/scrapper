@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+}
+
+.submit {
+    display: flex;
+    margin-left: 46%;
+}
+
+.submit {
+    max-width: 100px;
+    cursor: pointer;
+    background-color: #29A96D;
+    border-radius: 4px;
+    border: 2px solid black;
+    padding: 8px;
+    color: black;
+}
+
+.submit:hover {
+    background-color: #1e8857;
+    color: white;
+}
