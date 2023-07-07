@@ -47,16 +47,16 @@ def query():
     if request.method == 'POST':
         data = request.form
         language = data['language'] #Retrieve language choosen by user
-        pkl_content = load_pkl() #Create generator
-        try:
-            # Get a doc chunk
-            doc_chunk = next(pkl_content)
-        except StopIteration:
-            # No more docs
-            doc_chunk = ""
+        pkl_content = load_pkl()
+        combined_content = ""
+        if pkl_content:
+            for doc in pkl_content:
+                combined_content += doc.page_content
+        else:
+            print("No content in the pickle file.")
         delete_pdf_files('pdf') #Delete files in PDF directory
         delete_docs_pkl() #Delete file with .pkl extension
-        response = generate_response(language, doc_chunk)
+        response = generate_response(language, combined_content)
         return redirect(url_for('response', response=response))
     else:
         return render_template('query.html')

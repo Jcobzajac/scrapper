@@ -1,4 +1,6 @@
 import os
+import random
+import string
 from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.text_splitter import Document
@@ -15,6 +17,8 @@ from langchain.llms import OpenAI
 import pickle
 
 all_pages = []
+#Function for generating random string
+generate_random_string = lambda length: ''.join(random.choice(string.ascii_letters) for _ in range(length))
 
 
 def ingestor(input_file):
@@ -41,10 +45,12 @@ def ingestor(input_file):
             # Create a new Document with the chunk as its page_content, and the metadata of original_doc.
             new_doc = Document(page_content=chunk, metadata=original_doc.metadata.copy())
             docs.append(new_doc)
-
+    random_string = generate_random_string(10)
     # saves the docs locally
-    with open("docs.pkl", "wb") as f:
+    with open(f"{random_string}.pkl", "wb") as f:
         pickle.dump(docs, f)
+    name_file = f"{random_string}.pkl"
+    return name_file
 
 #search = faiss_index.similarity_search("the history of the fish farming", k=1)
 #for doc in search:

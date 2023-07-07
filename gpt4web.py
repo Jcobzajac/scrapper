@@ -3,6 +3,7 @@ import openai
 import datetime
 import pickle
 import logging
+import glob
 
 GPT_MODEL = "gpt-3.5-turbo"
 openai.api_key = os.getenv("OPENAI_API_KEY") 
@@ -58,18 +59,22 @@ def generate_response(user_query, doc_chunk):
 
 
 def load_pkl():
+    pkl_file = glob.glob("*.pkl")
+    pkl_file = pkl_file[0]
     try:
-        with open('docs.pkl', 'rb') as file:
+        with open(f'{pkl_file}', 'rb') as file:
             docs = pickle.load(file)
-            print("The file docs.pkl does exist")
+            print("The file with .pkl does exist")
+            return docs
     except FileNotFoundError:
         docs = []
-        print("The file docs.pkl doesn't exist")
-    for doc in docs:
-        yield doc.page_content
+        print("The file with .pkl doesn't exist")
+        return []
 
 def delete_docs_pkl():
-    file_path = 'docs.pkl'
+    pkl_file = glob.glob("*.pkl")
+    pkl_file = pkl_file[0]
+    file_path = f'{pkl_file}'
     if os.path.exists(file_path):
         os.remove(file_path)
         return "The file docs.pkl deleted successfully"
