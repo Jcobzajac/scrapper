@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for, s
 from flask_cors import CORS
 from werkzeug.utils import secure_filename 
 from pdf_ingestor import ingestor
+from checker import checker
 import os 
 from gpt4web import load_pkl, generate_response, delete_docs_pkl, delete_pdf_files
 import tempfile
@@ -15,6 +16,7 @@ class Config(object):
     UPLOAD_FOLDER = os.path.join(basedir, './pdf')
     ALLOWED_EXTENSIONS = {'pdf'}
     SESSION_TYPE = 'filesystem'
+    MAX_RESPONSE_HEADERS = 655363113515325235  
 
 #View for error
 @app.route("/error", methods=["GET","POST"])
@@ -48,15 +50,7 @@ def query():
         data = request.form
         language = data['language'] #Retrieve language choosen by user
         pkl_content = load_pkl()
-        combined_content = ""
-        if pkl_content:
-            for doc in pkl_content:
-                combined_content += doc.page_content
-        else:
-            print("No content in the pickle file.")
-        delete_pdf_files('pdf') #Delete files in PDF directory
-        delete_docs_pkl() #Delete file with .pkl extension
-        response = generate_response(language, combined_content)
+        response = checker(language, pkl_content)
         return redirect(url_for('response', response=response))
     else:
         return render_template('query.html')
