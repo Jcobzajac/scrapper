@@ -11,7 +11,6 @@ def checker(language, pkl_file):
     prompt_in_tokens = encoding.encode(pkl_file)
 
     string = ""
-    array = []
 
     for i in range(0, len(prompt_in_tokens), max_amount_tokens):
         #Create chunks based on constraints related to the size of tokens
@@ -20,7 +19,6 @@ def checker(language, pkl_file):
         decoded_chunk = encoding.decode(chunk)
         prompt = generate_response(language, decoded_chunk)
         string += "".join(str(decoded_chunk))
-        array.append(decoded_chunk)
     
 
     return string
